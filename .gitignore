@@ -4,11 +4,11 @@
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
+
 #Plugin for VSCode
 /Assets/VSCode
 #Meta for VSCode plugin 
 /Assets/VSCode.meta
-
 # Visual Studio 2015 cache directory
 /.vs/
 # Visual Studio Code settings 
@@ -38,3 +38,5 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+lin.*
+[Ll]in_Data/
