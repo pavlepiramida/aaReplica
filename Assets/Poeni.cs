@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Poeni : MonoBehaviour {
 
-	public Text BodoviUI;
+	public static Text BodoviUI;
 	public static int bodovi;
 
 	// <summary>
@@ -13,15 +13,18 @@ public class Poeni : MonoBehaviour {
 	/// </summary>
 	public void Awake()
 	{
-		 bodovi=0;
+		bodovi=0;
+	    BodoviUI=GameObject.Find("TextBodovi").GetComponent<Text>();
+		BodoviUI.text="0";
 	}
-	public void Update()
+
+	static public void Pogodak()
 	{
-		Pogodak();
-	}
-	public void Pogodak()
-	{
-		BodoviUI.text=bodovi.ToString();	
+		if(Klonovi.krajbrt)//podizi bodove dok se igra,kada je false,roknuo je ciodu o ciodu i nema vise bodovanja
+		{
+			bodovi++;
+			BodoviUI.text=bodovi.ToString();
+		}
 	}
 
 

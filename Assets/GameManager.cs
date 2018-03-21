@@ -6,36 +6,19 @@ using UnityEngine.Animations;
 
 public class GameManager : MonoBehaviour
 {
-	public static GameManager gm;
 	public Animator Animator;
 
-	 
-	  
-	/// <summary>
-	/// Awake is called when the script instance is being loaded.
-	/// </summary>
-	
-		
 	public void Opet()
-	{
-		
-       
+	{ 
 	   SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 	public void EndGame()
     {
-
-       
-		 Animator.SetTrigger("GejmOverio");
-        FindObjectOfType<rotor>().enabled = false;
-        FindObjectOfType<Klonovi>().enabled = false;
-		
-		// SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-		//StartCoroutine(Opet());
+		HighScoreSystem.KrajIgre(Poeni.bodovi);
+		FindObjectOfType<rotor>().enabled=false;
+		FindObjectOfType<Poeni>().enabled=false;
+		Klonovi.krajbrt=false;//Postavljamo krajbrt i nema vise instanciranja
+    	Animator.SetTrigger("GejmOverio");
     }
 
-    private static void NewMethod()
-    {
-        FindObjectOfType<Canvas>().enabled = true;
-    }
 }
