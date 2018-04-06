@@ -38,7 +38,7 @@ public class AudioManager : MonoBehaviour {
 
 
 
-	public void Play(string ime,bool stanje)
+	public void Play(string ime,int stanje)
 	{
 			FindSound(ime,stanje);
 	}
@@ -48,7 +48,8 @@ public class AudioManager : MonoBehaviour {
 	/// </summary>
 	void Start()
 	{
-		FindSound("Tema",true);
+		if(PlayerPrefs.GetInt("Zvuk")==1)//da li je zvuk prosli put bio iskljucen ili ne
+		FindSound("Tema",1);
 
 	}
 
@@ -77,14 +78,14 @@ public class AudioManager : MonoBehaviour {
 		   	}
 	}
 
-	public void FindSound (string ime,bool stanje)  //stanje,true ili false,false oznacava pauzu,true == play
+	public void FindSound (string ime,int stanje)  //stanje,true ili false,false oznacava pauzu,true == play || 1
 	{
 		Sound zvuk = Array.Find(zvuci, zvuci => zvuci.name == ime);
 		if (zvuk == null)
 		{zvuk.source.Pause();
 			Debug.Log("NE postoji zvuk: " + ime );
 		}
-		else if (stanje)
+		else if (stanje==1)
 		{
 		zvuk.source.pitch=1f;
 		zvuk.source.Play();
