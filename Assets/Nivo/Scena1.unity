@@ -420,6 +420,53 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 750558474}
+--- !u!1 &855877973
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 855877975}
+  - component: {fileID: 855877974}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &855877974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 855877973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385419db849b74029b3899ea3dc4ae3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  zvuci:
+  - name: Tema
+    clip: {fileID: 8300000, guid: e0eaf9f64eecb45f7af143cf6a0a179d, type: 3}
+    volume: 0.99
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+--- !u!4 &855877975
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 855877973}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &986843263
 GameObject:
   m_ObjectHideFlags: 0
@@ -713,7 +760,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d09f2e8cfb95d40d6a6a8ac0415ed514, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zvuk: 1
   ZvukDA: {fileID: 21300000, guid: 33f1dbf6112d844d0ab86b9462f6950a, type: 3}
   ZvukeNE: {fileID: 21300000, guid: 86aa9cf4c2c8740ad8c8499479146878, type: 3}
   DugmeZvuk: {fileID: 1435198760}
@@ -814,7 +860,6 @@ GameObject:
   - component: {fileID: 1467500183}
   - component: {fileID: 1467500182}
   - component: {fileID: 1467500181}
-  - component: {fileID: 1467500185}
   - component: {fileID: 1467500180}
   - component: {fileID: 1467500179}
   m_Layer: 0
@@ -921,25 +966,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1467500185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 114059036283101274, guid: 4589824ccc9e047b3913d4da79e30c1b,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1467500178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385419db849b74029b3899ea3dc4ae3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zvuci:
-  - name: Tema
-    clip: {fileID: 8300000, guid: e0eaf9f64eecb45f7af143cf6a0a179d, type: 3}
-    volume: 0.99
-    pitch: 1
-    loop: 1
-    source: {fileID: 0}
 --- !u!1 &1469973070 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1453077584777676, guid: da3156701dba64b8db180423556fc65a,
