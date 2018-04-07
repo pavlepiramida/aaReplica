@@ -29,6 +29,7 @@ public class cioda : MonoBehaviour
 		switch(collider.tag)
 		{			
 			default:
+			FindObjectOfType<TimeTicker>().PogodioCiodu();	
 			FindObjectOfType<GameManager>().EndGame();
 			break;
 

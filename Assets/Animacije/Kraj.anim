@@ -70,7 +70,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.5
+        time: 0.41666666
         value: 8.11
         inSlope: 0
         outSlope: 0
@@ -216,7 +216,7 @@ AnimationClip:
         outSlope: 0
         tangentMode: 136
       - serializedVersion: 2
-        time: 0.5
+        time: 0.41666666
         value: 8.11
         inSlope: 0
         outSlope: 0
@@ -255,7 +255,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_GenerateMotionCurves: 0
   m_Events:
-  - time: 0.6666667
+  - time: 0.65
     functionName: Opet
     data: 
     objectReferenceParameter: {fileID: 0}
