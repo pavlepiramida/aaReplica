@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
 	   SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 	}
 
-	IEnumerator TimesUpRestart()
+	IEnumerator TimesUpRestart()//mrzi me da pravim animaciju
 	{
 		yield return new WaitForSeconds(1.8f);
 		Opet();
@@ -34,8 +34,7 @@ public class GameManager : MonoBehaviour
 		FindObjectOfType<Poeni>().enabled=false;
 		FindObjectOfType<cioda>().cioda_brzina=10f;
 		Klonovi.krajbrt=false;
-    	//Animator.SetTrigger("Opet");
-		StartCoroutine(TimesUpRestart());
+    	StartCoroutine(TimesUpRestart());
 	}
 
 }

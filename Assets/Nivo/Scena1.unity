@@ -994,9 +994,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.005, y: 0.005}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.25
+  m_Radius: 1.2
 --- !u!1 &1479375513
 GameObject:
   m_ObjectHideFlags: 0
@@ -1254,6 +1254,15 @@ Prefab:
     - target: {fileID: 1453077584777676, guid: da3156701dba64b8db180423556fc65a, type: 2}
       propertyPath: m_TagString
       value: Meta
+      objectReference: {fileID: 0}
+    - target: {fileID: 114767752770222284, guid: da3156701dba64b8db180423556fc65a,
+        type: 2}
+      propertyPath: CircleCollider
+      value: 
+      objectReference: {fileID: 1469973074}
+    - target: {fileID: 1453077584777676, guid: da3156701dba64b8db180423556fc65a, type: 2}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: da3156701dba64b8db180423556fc65a, type: 2}

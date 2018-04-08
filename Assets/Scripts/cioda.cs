@@ -5,15 +5,11 @@ using UnityEngine;
 
 public class cioda : MonoBehaviour
 {
-	
-
 	public Rigidbody2D cioda_rb;
 	public bool udario = false;
-
 	public float cioda_brzina = 40f;
 
 	
-	// Update is called once per frame
 	void FixedUpdate()
 	{
 		if (!udario)
@@ -22,10 +18,8 @@ public class cioda : MonoBehaviour
 		}
 
 	}
-
 	private void OnTriggerEnter2D(Collider2D collider)
-	{
-	
+	{	
 		switch(collider.tag)
 		{			
 			default:
@@ -36,10 +30,9 @@ public class cioda : MonoBehaviour
 			case "Meta":
 			udario = true;
 			transform.SetParent(collider.transform);
+			//FindObjectOfType<rotor>().PogodjenaMeta();
 			Poeni.Pogodak();
 			break;
 		}
-		
-
 	}
 }
