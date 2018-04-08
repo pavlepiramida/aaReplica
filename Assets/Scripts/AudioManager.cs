@@ -12,7 +12,7 @@ public class AudioManager : MonoBehaviour {
 	public void  Awake()
 	{
 		if (instancaAM==null)
-		instancaAM=this;
+			instancaAM=this;
 		else
 		{
 			Destroy(gameObject);
@@ -44,9 +44,8 @@ public class AudioManager : MonoBehaviour {
 			FindSound("Tema",1);
 			break;
 		}
-		
-
 	}
+
 	public void FindSound (string ime,int stanje)  //stanje,true ili false,false oznacava pauzu,true == play || 1
 	{
 		Sound zvuk = Array.Find(zvuci, zvuci => zvuci.name == ime);
