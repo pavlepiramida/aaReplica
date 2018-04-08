@@ -9,7 +9,7 @@ public class TimeTicker : MonoBehaviour {
 	public Text vreme;
 	void Awake()
 	{
-		tajmer=10;
+		tajmer=Random.Range(5,11);
 		vreme.text="Time\n" + tajmer.ToString();
 		StartCoroutine(Odbrojavanje());
 	}	
@@ -27,16 +27,16 @@ public class TimeTicker : MonoBehaviour {
 			yield return new WaitForSeconds(0.5f);
 			switch((int)tajmer)
 			{
-			case 0:
-			StopAllCoroutines();
-			vreme.text="Time\n" + ((int)tajmer).ToString();
-			FindObjectOfType<GameManager>().TimesUp();
-			break;	
+				case 0:
+				StopAllCoroutines();
+				vreme.text="Time\n" + ((int)tajmer).ToString();
+				FindObjectOfType<GameManager>().TimesUp();
+				break;	
 
-			default:
-			vreme.text="Time\n" + ((int)tajmer).ToString();
-			tajmer-=0.5;
-			break;
+				default:
+				vreme.text="Time\n" + ((int)tajmer).ToString();
+				tajmer-=0.5;
+				break;
 			}				
 		}
 	}

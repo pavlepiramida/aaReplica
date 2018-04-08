@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 	public void EndGame()
     {
 		HighScoreSystem.KrajIgre(Poeni.bodovi);
-		FindObjectOfType<rotor>().rotacija_b=10f;
+		FindObjectOfType<rotor>().Rotacija_b=10f;
 		FindObjectOfType<Poeni>().enabled=false;
 		Klonovi.krajbrt=false;//Postavljamo krajbrt i nema vise instanciranja
     	Animator.SetTrigger("GejmOverio");
@@ -30,9 +30,9 @@ public class GameManager : MonoBehaviour
 	public void TimesUp()//kad istekne vreme
 	{
 		HighScoreSystem.KrajIgre(Poeni.bodovi);
-		FindObjectOfType<rotor>().rotacija_b=10f;
+		FindObjectOfType<rotor>().Rotacija_b=10f;
 		FindObjectOfType<Poeni>().enabled=false;
-		FindObjectOfType<cioda>().cioda_brzina=10f;
+		FindObjectOfType<cioda>().Cioda_brzina=10f;
 		Klonovi.krajbrt=false;
     	StartCoroutine(TimesUpRestart());
 	}

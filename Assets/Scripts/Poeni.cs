@@ -8,9 +8,6 @@ public class Poeni : MonoBehaviour {
 	public static Text BodoviUI;
 	public static int bodovi;
 
-	// <summary>
-	/// Awake is called when the script instance is being loaded.
-	/// </summary>
 	public void Awake()
 	{
 		bodovi=0;
@@ -20,12 +17,12 @@ public class Poeni : MonoBehaviour {
 
 	static public void Pogodak()
 	{
-		if(Klonovi.krajbrt)//podizi bodove dok se igra,kada je false,roknuo je ciodu o ciodu i nema vise bodovanja
+		switch(Klonovi.krajbrt)//podizi bodove dok se igra,kada je false,roknuo je ciodu o ciodu i nema vise bodovanja
 		{
+			case true:
 			bodovi++;
 			BodoviUI.text=bodovi.ToString();
+			break;
 		}
 	}
-
-
 }

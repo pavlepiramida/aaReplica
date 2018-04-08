@@ -12,9 +12,11 @@ public class Klonovi : MonoBehaviour
 	}
 	public void Pucajga()
 	{
-		if(krajbrt)
-		{
+		switch(krajbrt)
+		{	
+			case true:
 			Instantiate(cioda);
+			break;
 		}	
 			
 	}

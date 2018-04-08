@@ -18,38 +18,36 @@ public class ZvukDugme : MonoBehaviour {
 	public void Awake() //posto awake puca null reference na zvuk=... prvi put,a sa start metoda vraca pogresnu vrednost 
 	//morao sam da upakujem u try i catch
 	{
+		zvuk=PlayerPrefs.GetInt("Zvuk");
+		switch(zvuk)
+		{
+			case 0:
+			DugmeZvuk.image.sprite=ZvukeNE; //posto je AudioMenager DontDestroy,pre postavke dugmeta moramo da vidimo koji sprajt ide
+			break;
 		
-		try 
-		{
-			zvuk=PlayerPrefs.GetInt("Zvuk");
+			case 1:
+			DugmeZvuk.image.sprite=ZvukDA;
+			break;
 		}
-		catch
-		{
-			Debug.Log("Prvi put startovanje igre");
-		}
-		if (zvuk==0)
-		DugmeZvuk.image.sprite=ZvukeNE; //posto je AudioMenager DontDestroy,pre postavke dugmeta moramo da vidimo koji sprajt ide
-		else
-		DugmeZvuk.image.sprite=ZvukDA;
-
 	}
 
 	public void Iskljuci_zvuk()
 	{
-		if (zvuk==1)
+		switch(zvuk)
 		{
+			case 1:
 			FindObjectOfType<AudioManager>().Play("Tema",0);
 			DugmeZvuk.image.sprite=ZvukeNE;
 			PlayerPrefs.SetInt("Zvuk",0);
 			zvuk=0;
-
-		}
-		else
-		{
+			break;
+			
+			case 0:
 			FindObjectOfType<AudioManager>().Play("Tema",1);
 			DugmeZvuk.image.sprite=ZvukDA;
 			PlayerPrefs.SetInt("Zvuk",1);
 			zvuk=1;
+			break;
 		}
 	}
 }
